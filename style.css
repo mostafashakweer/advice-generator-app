@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: #1f2632;
+  color: #cee3e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.card {
+  background: #323a49;
+  border-radius: 1rem;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  max-width: 540px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.advice-id {
+  color: #52ffa8;
+  font-size: 0.75rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+.advice-text {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+  font-weight: 800;
+}
+
+/* Divider*/
+.divider {
+  margin: 1.5rem 0;
+}
+
+.divider-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 1px;
+  background: linear-gradient(to right,
+      transparent 0%,
+      #4f5d75 10%,
+      #4f5d75 90%,
+      transparent 100%);
+}
+
+.side-line {
+  width: 30%;
+  height: 1px;
+  background-color: #4f5d75;
+  opacity: 0.3;
+}
+
+.pause-lines {
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #323a49;
+  padding: 0 0.5rem;
+}
+
+.pause-lines span {
+  width: 4px;
+  height: 16px;
+  background-color: #cee3e9;
+  border-radius: 2px;
+}
+
+/* bottom*/
+.dice-btn {
+  background: #52ffa8;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: box-shadow 0.3s ease;
+}
+
+.dice-btn:hover {
+  box-shadow: 0 0 40px #52ffa8;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .card {
+    padding: 3rem;
+  }
+
+  .advice-text {
+    font-size: 1.75rem;
+  }
+
+  .divider {
+    margin: 2rem 0;
+  }
+
+  .pause-lines {
+    gap: 0.75rem;
+  }
+
+  .pause-lines span {
+    height: 20px;
+  }
+}
